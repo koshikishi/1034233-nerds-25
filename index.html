@@ -168,5 +168,29 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal modal--contacts hidden">
+      <h2 class="title title--medium">Напишите нам</h2>
+      <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="contacts-form__field">
+          <label for="contacts-name">Ваше имя:</label>
+          <input id="contacts-name" type="text" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="contacts-form__field">
+          <label for="contacts-email">Ваш e-mail:</label>
+          <input id="contacts-email" type="email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="contacts-form__field contacts-form__field--wide">
+          <label for="contacts-message">Текст письма:</label>
+          <textarea id="contacts-message" name="message" placeholder="В свободной форме"></textarea>
+        </div>
+        <button class="button button--wide" type="submit">Отправить</button>
+      </form>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
+
+    <div class="overlay hidden"></div>
   </body>
 </html>
