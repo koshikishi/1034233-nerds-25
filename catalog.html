@@ -22,5 +22,78 @@
       </nav>
       <h1 class="title header__title">Магазин готовых шаблонов</h1>
     </header>
+
+    <main>
+      <div class="columns">
+        <section class="filters page__filters">
+          <h2 class="visually-hidden">Фильтр шаблонов</h2>
+          <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="filters-form__part">
+              <legend class="title-second">Стоимость:</legend>
+              <div class="filters-form__slider">
+                <div class="filters-form__range">
+                  <div class="filters-form__track"></div>
+                </div>
+                <button class="filters-form__thumb" type="button">
+                  <span class="visually-hidden">Минимальная цена</span>
+                </button>
+                <button class="filters-form__thumb" type="button">
+                  <span class="visually-hidden">Максимальная цена</span>
+                </button>
+              </div>
+              <div class="filters-form__price">
+                <div class="filters-form__field">
+                  <label for="min-price" aria-labelledby="Цена от">От</label>
+                  <input id="min-price" type="number" name="min-price" value="0" min="0">
+                </div>
+                <div class="filters-form__field">
+                  <label for="max-price" aria-labelledby="Цена до">До</label>
+                  <input id="max-price" type="number" name="max-price" value="15000" min="0">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filters-form__part">
+              <legend class="title-second">Сетка:</legend>
+              <div class="filters-form__option">
+                <input class="filters-form__input filters-form__input--radio visually-hidden" id="filter-responsive" type="radio" name="layout" value="responsive" checked>
+                <label for="filter-responsive">Адаптивная</label>
+              </div>
+              <div class="filters-form__option">
+                <input class="filters-form__input filters-form__input--radio visually-hidden" id="filter-fixed" type="radio" name="layout" value="fixed">
+                <label for="filter-fixed">Фиксированная</label>
+              </div>
+              <div class="filters-form__option">
+                <input class="filters-form__input filters-form__input--radio visually-hidden" id="filter-liquid" type="radio" name="layout" value="liquid">
+                <label for="filter-liquid">Резиновая</label>
+              </div>
+            </fieldset>
+            <fieldset class="filters-form__part">
+              <legend class="title-second">Особенности:</legend>
+              <div class="filters-form__option">
+                <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-slider" type="checkbox" name="slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </div>
+              <div class="filters-form__option">
+                <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-features" type="checkbox" name="features">
+                <label for="filter-features">Блок преимуществ</label>
+              </div>
+              <div class="filters-form__option">
+                <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-news" type="checkbox" name="news" checked>
+                <label for="filter-news">Новости</label>
+              </div>
+              <div class="filters-form__option">
+                <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-gallery" type="checkbox" name="gallery">
+                <label for="filter-gallery">Галерея</label>
+              </div>
+              <div class="filters-form__option">
+                <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-cart" type="checkbox" name="cart">
+                <label for="filter-cart">Корзина</label>
+              </div>
+            </fieldset>
+            <button class="button button--second button--wide" type="submit">Показать</button>
+          </form>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
