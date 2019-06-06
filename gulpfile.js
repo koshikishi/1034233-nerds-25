@@ -7,6 +7,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var cleancss = require('gulp-clean-css');
 var rename = require('gulp-rename');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -20,6 +21,20 @@ gulp.task('css', function () {
     }))
     .pipe(sourcemaps.write('css'))
     .pipe(gulp.dest('css'));
+});
+
+gulp.task('img', function () {
+  return gulp.src('source/img/*.{png,jpg,svg}')
+    .pipe(imagemin([
+      imagemin.optipng({
+        optimizationLevel: 5
+      }),
+      imagemin.jpegtran({
+        progressive: true
+      }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest('img'));
 });
 
 gulp.task('watcher', function () {
