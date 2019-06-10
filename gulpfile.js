@@ -19,7 +19,7 @@ gulp.task('css', function () {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(sourcemaps.write('css'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'));
 });
 
