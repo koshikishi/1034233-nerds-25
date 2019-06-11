@@ -1,0 +1,61 @@
+// Навигация по сайту
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+
+  &--site {
+    width: 440px;
+  }
+
+  &--user {
+    justify-content: flex-end;
+    width: 260px;
+  }
+
+  &__link {
+    margin-top: 11px;
+    padding: {
+      top: 5px;
+      bottom: 5px;
+    }
+    color: inherit;
+
+    &:not(:last-child) {
+      margin-right: 46px;
+    }
+
+    &[href] {
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+
+      &:active {
+        color: transparentize(#000000, 0.7);
+      }
+    }
+
+    &--active {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background-color: $red;
+      }
+    }
+
+    &--cart {
+      padding-left: 40px;
+      background: url("../img/icon-cart.svg") 0 center no-repeat;
+    }
+  }
+}

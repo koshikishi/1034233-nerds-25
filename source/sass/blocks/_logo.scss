@@ -1,0 +1,18 @@
+// Логотип сайта
+.logo {
+  &[href] {
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  img {
+    display: block;
+  }
+}

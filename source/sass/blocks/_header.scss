@@ -1,0 +1,30 @@
+// Шапка сайта
+.header {
+  padding-top: 49px;
+  background-color: $gray;
+
+  &__nav {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    margin-right: 202px;
+  }
+
+  &__menu {
+    margin-top: 10px;
+
+    &:last-of-type {
+      margin-left: auto;
+    }
+  }
+
+  &__title {
+    padding: {
+      top: 78px;
+      bottom: 108px;
+    }
+    text-align: center;
+  }
+}

@@ -1,8 +1,14 @@
+// Подключаем переменные
+@import "misc/variables";
+
 // Подключаем миксины
 @import "mixins/font-face";
 
 // Подключаем шрифты
-@import "fonts";
+@import "misc/fonts";
+
+// Подключаем вспомогательные классы
+@import "misc/container", "misc/visually-hidden";
 
 // Подключаем стили
-@import "blocks/page";
+@import "blocks/page", "blocks/title", "blocks/header", "blocks/logo", "blocks/menu";
