@@ -36,6 +36,7 @@
       &:hover,
       &:focus {
         color: $red;
+        outline: none;
       }
 
       &:active {
