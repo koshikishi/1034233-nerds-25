@@ -10,5 +10,11 @@
 // Подключаем вспомогательные классы
 @import "misc/container", "misc/visually-hidden";
 
-// Подключаем стили
-@import "blocks/page", "blocks/title", "blocks/header", "blocks/logo", "blocks/menu";
+// Подключаем основные стили
+@import "blocks/page", "blocks/title", "blocks/button";
+
+// Подключаем стили шапки
+@import "blocks/header", "blocks/logo", "blocks/menu";
+
+// Подключаем стили слайдера
+@import "blocks/slider";
