@@ -6,17 +6,21 @@
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   &--site {
-    width: 440px;
+    min-width: 440px;
+    max-width: 500px;
   }
 
   &--user {
     justify-content: flex-end;
-    width: 260px;
+    max-width: 260px;
   }
 
   &__link {
+    max-width: 200px;
     margin-top: 11px;
     padding: {
       top: 5px;
