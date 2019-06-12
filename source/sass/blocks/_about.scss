@@ -27,7 +27,7 @@
   &__list {
     margin: 0;
     padding: 0;
-    padding-left: 37px;
+    padding-left: 36px;
     list-style: none;
 
     li {
@@ -41,7 +41,7 @@
         content: "";
         position: absolute;
         top: 11px;
-        left: -36px;
+        left: -35px;
         width: 25px;
         height: 2px;
         background-color: $red;
@@ -53,7 +53,7 @@
     width: 360px;
   }
 
-  &__image {
+  &__logo {
     display: block;
     margin-bottom: 36px;
   }
