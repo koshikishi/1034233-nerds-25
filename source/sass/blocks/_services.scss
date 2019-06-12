@@ -1,6 +1,5 @@
 // Блок услуг
 .services {
-  padding-bottom: 80px;
   border-bottom: 2px solid $gray;
 
   &__list {
@@ -12,10 +11,11 @@
     position: relative;
     width: 300px;
     min-height: 176px;
+    margin-bottom: 80px;
     padding-top: 171px;
     background-repeat: no-repeat;
 
-    &:not(:last-child) {
+    &:not(:nth-child(3n)) {
       margin-right: 100px;
     }
 
