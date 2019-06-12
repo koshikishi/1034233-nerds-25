@@ -1,0 +1,30 @@
+// Блок портфолио
+.works {
+  border-bottom: 2px solid $gray;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 260px;
+    min-height: 180px;
+    opacity: 0.2;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+
+    img {
+      display: block;
+    }
+  }
+}
