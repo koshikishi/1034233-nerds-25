@@ -1,0 +1,97 @@
+// Блок о студии
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 55px;
+  border-bottom: 2px solid $gray;
+
+  &__column-left {
+    width: 660px;
+    padding-top: 34px;
+  }
+
+  &__tagline {
+    display: block;
+    margin-bottom: 33px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 39px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-left: 37px;
+    list-style: none;
+
+    li {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: -36px;
+        width: 25px;
+        height: 2px;
+        background-color: $red;
+      }
+    }
+  }
+
+  &__column-right {
+    width: 360px;
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: 36px;
+  }
+
+  &__table {
+    width: 360px;
+    border-spacing: 0 10px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    &-caption {
+      margin-bottom: 21px;
+    }
+
+    tbody {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &-heading,
+    &-percent {
+      width: 110px;
+      max-width: 110px;
+      padding: 0;
+      padding-right: 10px;
+    }
+
+    &-heading {
+      font-weight: inherit;
+      line-height: 18px;
+    }
+
+    &-percent {
+      span {
+        font-size: 26px;
+        vertical-align: top;
+      }
+    }
+  }
+}
