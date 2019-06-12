@@ -30,4 +30,9 @@
     background-color: adjust-color($red, $red: -36, $green: -31, $blue: -31);
     box-shadow: inset 0 3px transparentize($shadow-color, 0.9);
   }
+
+  &--narrow {
+    min-width: 160px;
+    max-width: 300px;
+  }
 }

@@ -11,10 +11,13 @@
 @import "misc/container", "misc/visually-hidden";
 
 // Подключаем основные стили
-@import "blocks/page", "blocks/title", "blocks/button";
+@import "blocks/page", "blocks/title", "blocks/title-second", "blocks/button";
 
 // Подключаем стили шапки
 @import "blocks/header", "blocks/logo", "blocks/menu";
 
 // Подключаем стили слайдера
 @import "blocks/slider";
+
+// Подключаем стили блока услуг
+@import "blocks/services";

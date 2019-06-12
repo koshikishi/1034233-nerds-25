@@ -1,0 +1,96 @@
+// Блок услуг
+.services {
+  padding-bottom: 80px;
+  border-bottom: 2px solid $gray;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    width: 300px;
+    min-height: 176px;
+    padding-top: 171px;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 300px;
+      height: 146px;
+    }
+
+    &--sites {
+      &::before {
+        background: {
+          color: $red;
+          image: url("../img/services-sites.png");
+        }
+      }
+    }
+
+    &--apps {
+      &::before {
+        background: {
+          color: $green;
+          image: url("../img/services-apps.png");
+        }
+      }
+
+      .button {
+        background-color: $green;
+
+        &:hover,
+        &:focus {
+          background-color: adjust-color($green, $green: -14, $blue: -8);
+        }
+
+        &:active {
+          background-color: adjust-color($green, $green: -32, $blue: -18);
+        }
+      }
+    }
+
+    &--presentations {
+      &::before {
+        background: {
+          color: $yellow;
+          image: url("../img/services-presentations.png");
+        }
+      }
+
+      .button {
+        background-color: $yellow;
+
+        &:hover,
+        &:focus {
+          background-color: adjust-color($yellow, $red: -5, $green: -19, $blue: -22);
+        }
+
+        &:active {
+          background-color: adjust-color($yellow, $red: -10, $green: -33, $blue: -40);
+        }
+      }
+    }
+
+    p {
+      width: 260px;
+      margin: 0;
+    }
+  }
+
+  &__title-second {
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+}
