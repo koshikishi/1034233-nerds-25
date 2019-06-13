@@ -1,0 +1,70 @@
+// Форма обратной связи
+.contacts-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__field {
+    width: 360px;
+    line-height: 18px;
+
+    &--wide {
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 9px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    input,
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px 13px;
+      font: inherit;
+      color: #444444;
+      background-color: transparent;
+      border: 2px solid #d7dcde;
+      border-radius: 3px;
+
+      &::placeholder {
+        color: currentColor;
+        opacity: 0.5;
+      }
+
+      &:hover {
+        border-color: #b4b9bb;
+      }
+
+      &:focus {
+        border-color: #000000;
+        outline: none;
+
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+
+      &:invalid {
+        color: adjust-color($red, $red: -20, $green: -20, $blue: -20);
+        border-color: currentColor;
+      }
+    }
+
+    input {
+      margin-bottom: 34px;
+    }
+
+    textarea {
+      height: 118px;
+      margin-bottom: 43px;
+      padding: {
+        top: 11px;
+        bottom: 11px;
+      }
+    }
+  }
+}

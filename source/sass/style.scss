@@ -8,7 +8,7 @@
 @import "misc/fonts";
 
 // Подключаем вспомогательные классы
-@import "misc/container", "misc/visually-hidden";
+@import "misc/container", "misc/visually-hidden", "misc/overlay";
 
 // Подключаем основные стили
 @import "blocks/page", "blocks/title", "blocks/title-second", "blocks/button";
@@ -30,3 +30,6 @@
 
 // Подключаем стили подвала
 @import "blocks/contacts", "blocks/socials";
+
+// Подключаем стили всплывающих окон
+@import "blocks/modal", "blocks/contacts-form";

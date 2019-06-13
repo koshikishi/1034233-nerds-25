@@ -36,6 +36,11 @@
     max-width: 300px;
   }
 
+  &--wide {
+    min-width: 260px;
+    max-width: 360px;
+  }
+
   &--full {
     min-width: 100%;
     max-width: none;
