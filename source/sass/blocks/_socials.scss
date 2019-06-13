@@ -1,0 +1,93 @@
+// Социальные кнопки сайта
+.socials {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  padding: {
+    top: 69px;
+    bottom: 70px;
+  }
+
+  &__text {
+    width: 580px;
+  }
+
+  &__tagline {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 22px;
+    color: #444444;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 260px;
+    margin: {
+      right: 140px;
+      bottom: -13px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    width: 78px;
+    height: 78px;
+    margin-bottom: 13px;
+    background-color: #e1e1e1;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background-color: adjust-color($red, $red: -20, $green: -20, $blue: -20);
+      outline: none;
+    }
+
+    &:active {
+      background-color: adjust-color($red, $red: -36, $green: -31, $blue: -31);
+      box-shadow: inset 0 3px transparentize($shadow-color, 0.9);
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 26px;
+      height: 26px;
+      background: {
+        repeat: no-repeat;
+        position: center;
+      }
+      transform: translate(-50%, -50%);
+    }
+
+    &--vk {
+      &::before {
+        background-image: url("../img/social-icon-vk.svg");
+      }
+    }
+
+    &--fb {
+      &::before {
+        background-image: url("../img/social-icon-fb.svg");
+      }
+    }
+
+    &--ig {
+      &::before {
+        background-image: url("../img/social-icon-ig.svg");
+      }
+    }
+  }
+}

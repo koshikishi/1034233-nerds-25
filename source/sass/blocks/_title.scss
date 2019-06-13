@@ -8,6 +8,13 @@
   line-height: 1;
   color: #000000;
 
+  &--small {
+    font: {
+      weight: bold;
+      size: 36px;
+    }
+  }
+
   &--medium {
     font-size: 45px;
   }

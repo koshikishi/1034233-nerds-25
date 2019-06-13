@@ -35,4 +35,9 @@
     min-width: 160px;
     max-width: 300px;
   }
+
+  &--full {
+    min-width: 100%;
+    max-width: none;
+  }
 }

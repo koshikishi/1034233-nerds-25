@@ -1,0 +1,45 @@
+// Блок контактов
+.contacts {
+  position: relative;
+  min-height: 416px;
+  background-color: #b5b5b5;
+
+  .container {
+    display: flex;
+  }
+
+  &__map {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/map.png") center no-repeat;
+  }
+
+  &__address {
+    position: relative;
+    width: 219px;
+    margin: {
+      top: 54px;
+      bottom: 54px;
+    }
+    padding: 49px 50px 47px;
+    font-style: normal;
+    background-color: #ffffff;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 18px;
+    line-height: 18px;
+    color: #666666;
+
+    &:last-of-type {
+      margin-bottom: 37px;
+    }
+  }
+}
