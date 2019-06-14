@@ -11,4 +11,17 @@
   &__template {
     margin-bottom: 33px;
   }
+
+  @supports (display: grid) {
+    &__list {
+      display: grid;
+      grid-template-columns: 360px 360px;
+      gap: 33px 40px;
+      margin-bottom: 49px;
+    }
+
+    &__template {
+      margin-bottom: 0;
+    }
+  }
 }

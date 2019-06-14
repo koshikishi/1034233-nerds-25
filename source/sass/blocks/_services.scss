@@ -93,4 +93,21 @@
   &__button {
     margin-top: 32px;
   }
+
+  @supports (display: grid) {
+    &__list {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      gap: 80px 100px;
+      margin-bottom: 80px;
+    }
+
+    &__item {
+      margin-bottom: 0;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 0;
+      }
+    }
+  }
 }

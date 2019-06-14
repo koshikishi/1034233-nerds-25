@@ -94,4 +94,10 @@
       }
     }
   }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 660px 360px;
+    gap: 140px;
+  }
 }

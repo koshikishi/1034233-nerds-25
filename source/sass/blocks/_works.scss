@@ -27,4 +27,12 @@
       display: block;
     }
   }
+
+  @supports (display: grid) {
+    &__list {
+      display: grid;
+      grid-template-columns: 260px 260px 260px 260px;
+      gap: 10px 40px;
+    }
+  }
 }

@@ -6,4 +6,10 @@
   &__column {
     width: 760px;
   }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 260px 760px;
+    gap: 140px;
+  }
 }
