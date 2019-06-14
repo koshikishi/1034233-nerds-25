@@ -1,0 +1,89 @@
+// Сортировка товаров
+.sorting {
+  display: flex;
+
+  &__title {
+    margin: {
+      top: -3px;
+      right: auto;
+    }
+    padding-right: 20px;
+  }
+
+  &__type {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: 280px;
+    margin-right: 39px;
+  }
+
+  &__button {
+    max-width: 120px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    opacity: 0.3;
+
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    &:active,
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__order {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 41px;
+  }
+
+  &__arrow {
+    width: 0;
+    height: 0;
+    color: transparentize(#a6a6a6, 0.8);
+    border: 0 solid currentColor;
+    border-width: 10px 5.5px;
+
+    &:hover,
+    &:focus {
+      color: #a6a6a6;
+      outline: none;
+    }
+
+    &:active,
+    &--active {
+      color: #231f20;
+    }
+
+    &--up {
+      border: {
+        top: none;
+        right-color: transparent;
+        left-color: transparent;
+      }
+    }
+
+    &--down {
+      border: {
+        right-color: transparent;
+        bottom: none;
+        left-color: transparent;
+      }
+    }
+  }
+}

@@ -28,8 +28,11 @@
 // Подключаем стили блока портфолио
 @import "blocks/works";
 
-// Подключаем стили блока фильтра товаров
+// Подключаем стили блока фильтра шаблонов
 @import "blocks/filters", "blocks/filters-form";
+
+// Подключаем стили блока сортировки шаблонов
+@import "blocks/sorting";
 
 // Подключаем стили подвала
 @import "blocks/contacts", "blocks/socials";
