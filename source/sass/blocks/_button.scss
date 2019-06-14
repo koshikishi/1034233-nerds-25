@@ -31,6 +31,22 @@
     box-shadow: inset 0 3px transparentize($shadow-color, 0.9);
   }
 
+  &--second {
+    min-width: auto;
+    color: #000000;
+    background-color: $gray;
+
+    &:hover,
+    &:focus {
+      background-color: adjust-color($gray, $red: -15, $green: -15, $blue: -15);
+    }
+
+    &:active {
+      color: transparentize(#000000, 0.7);
+      background-color: adjust-color($gray, $red: -25, $green: -25, $blue: -25);
+    }
+  }
+
   &--narrow {
     min-width: 160px;
     max-width: 300px;
@@ -38,7 +54,7 @@
 
   &--wide {
     min-width: 260px;
-    max-width: 360px;
+    max-width: 260px;
   }
 
   &--full {

@@ -8,7 +8,7 @@
 @import "misc/fonts";
 
 // Подключаем вспомогательные классы
-@import "misc/container", "misc/visually-hidden", "misc/overlay";
+@import "misc/container", "misc/columns", "misc/visually-hidden", "misc/overlay";
 
 // Подключаем основные стили
 @import "blocks/page", "blocks/title", "blocks/title-second", "blocks/button";
@@ -27,6 +27,9 @@
 
 // Подключаем стили блока портфолио
 @import "blocks/works";
+
+// Подключаем стили блока фильтра товаров
+@import "blocks/filters", "blocks/filters-form";
 
 // Подключаем стили подвала
 @import "blocks/contacts", "blocks/socials";

@@ -3,7 +3,7 @@
   min-width: 1200px;
   margin: 0;
   font: 16px/24px "Roboto", "Arial", sans-serif;
-  color: #283136;
+  color: $text-color;
   background-color: #ffffff;
 
   a {
@@ -13,6 +13,10 @@
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  &__header {
+    margin-bottom: 55px;
   }
 
   &__slider {

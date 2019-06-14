@@ -1,0 +1,9 @@
+// Блок колонок
+.columns {
+  display: flex;
+  justify-content: space-between;
+
+  &__column {
+    width: 760px;
+  }
+}
