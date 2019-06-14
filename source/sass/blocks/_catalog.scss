@@ -1,0 +1,14 @@
+// Каталог шаблонов
+.catalog {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 760px;
+    margin-bottom: 16px;
+  }
+
+  &__template {
+    margin-bottom: 33px;
+  }
+}

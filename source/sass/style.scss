@@ -34,6 +34,9 @@
 // Подключаем стили блока сортировки шаблонов
 @import "blocks/sorting";
 
+// Подключаем стили каталога шаблонов
+@import "blocks/catalog", "blocks/template", "blocks/pagination";
+
 // Подключаем стили подвала
 @import "blocks/contacts", "blocks/socials";
 

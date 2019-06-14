@@ -1,0 +1,13 @@
+// Блок пагинации
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__link {
+    margin-top: 11px;
+
+    &:not(:last-child) {
+      margin-right: 11px;
+    }
+  }
+}
