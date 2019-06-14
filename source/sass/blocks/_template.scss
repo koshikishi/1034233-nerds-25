@@ -1,20 +1,22 @@
 // Карточка шаблона
 .template {
+  $dark-gray: #4d4d4d;
+
   position: relative;
   width: 360px;
   min-height: 576px;
   padding-top: 40px;
-  background-color: transparentize(#4d4d4d, 0.88);
+  background-color: transparentize($dark-gray, 0.88);
   border-radius: 4px 4px 0 0;
 
   &:hover,
   &:focus-within {
-    background-color: #4d4d4d;
+    background-color: $dark-gray;
     box-shadow: 0 6px 15px transparentize($shadow-color, 0.75);
 
     .template {
       &__image {
-        outline-color: transparentize(#4d4d4d, 0.88);
+        outline-color: transparentize($dark-gray, 0.88);
       }
 
       &__info {
@@ -54,7 +56,7 @@
     overflow: auto;
     line-height: 18px;
     text-align: center;
-    background-color: $gray;
+    background-color: $light-gray;
     opacity: 0;
   }
 
@@ -80,6 +82,7 @@
 
   p {
     margin: 0;
+    color: $gray;
   }
 
   &__button {

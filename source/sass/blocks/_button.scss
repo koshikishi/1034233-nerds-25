@@ -35,16 +35,16 @@
     min-width: 50px;
     max-width: 260px;
     color: #000000;
-    background-color: $gray;
+    background-color: $light-gray;
 
     &:hover,
     &:focus {
-      background-color: adjust-color($gray, $red: -15, $green: -15, $blue: -15);
+      background-color: adjust-color($light-gray, $red: -15, $green: -15, $blue: -15);
     }
 
     &:active {
       color: transparentize(#000000, 0.7);
-      background-color: adjust-color($gray, $red: -25, $green: -25, $blue: -25);
+      background-color: adjust-color($light-gray, $red: -25, $green: -25, $blue: -25);
     }
   }
 
@@ -55,7 +55,7 @@
     &:active {
       color: #000000;
       background-color: #ffffff;
-      box-shadow: inset 0 0 0 3px adjust-color($gray, $red: -19, $green: -19, $blue: -19);
+      box-shadow: inset 0 0 0 3px adjust-color($light-gray, $red: -19, $green: -19, $blue: -19);
       cursor: auto;
     }
   }

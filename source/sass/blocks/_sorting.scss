@@ -1,5 +1,7 @@
 // Сортировка товаров
 .sorting {
+  $gray: #a6a6a6;
+
   display: flex;
 
   &__title {
@@ -55,13 +57,13 @@
   &__arrow {
     width: 0;
     height: 0;
-    color: transparentize(#a6a6a6, 0.8);
+    color: transparentize($gray, 0.8);
     border: 0 solid currentColor;
     border-width: 10px 5.5px;
 
     &:hover,
     &:focus {
-      color: #a6a6a6;
+      color: $gray;
       outline: none;
     }
 

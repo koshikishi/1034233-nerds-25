@@ -1,7 +1,7 @@
 // Слайдер сайта
 .slider {
   position: relative;
-  background-color: $gray;
+  background-color: $light-gray;
 
   &__list {
     display: flex;
@@ -17,7 +17,7 @@
       bottom: 80px;
     }
     background: {
-      color: $gray;
+      color: $light-gray;
       repeat: no-repeat;
     }
 
