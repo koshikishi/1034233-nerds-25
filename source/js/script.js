@@ -113,6 +113,32 @@ for (var i = 0; i < sliderDots.length; i++) {
   addDotClickHandler(sliderDots[i], slides[i]);
 }
 
+// Инициализация интерактивной карты
+function initMap() {
+  var mapCoordinates = {
+    lat: 59.939105,
+    lng: 30.321487
+  };
+
+  var map = new google.maps.Map(document.querySelector('.contacts__map'), {
+    zoom: 17,
+    center: mapCoordinates,
+    disableDefaultUI: true
+  });
+
+  var markerCoordinates = {
+    lat: 59.938723,
+    lng: 30.323789
+  };
+  var icon = 'img/map-marker.png';
+
+  var marker = new google.maps.Marker({
+    position: markerCoordinates,
+    map: map,
+    icon: icon
+  });
+}
+
 // Появление всплывающего окна
 function modalShow(elmt) {
   elmt.classList.add('modal--shown');
