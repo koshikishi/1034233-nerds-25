@@ -9,7 +9,21 @@
   background-color: transparentize($dark-gray, 0.88);
   border-radius: 4px 4px 0 0;
 
-  &:hover,
+  &:hover {
+    background-color: $dark-gray;
+    box-shadow: 0 6px 15px transparentize($shadow-color, 0.75);
+
+    .template {
+      &__image {
+        outline-color: transparentize($dark-gray, 0.88);
+      }
+
+      &__info {
+        opacity: 1;
+      }
+    }
+  }
+
   &:focus-within {
     background-color: $dark-gray;
     box-shadow: 0 6px 15px transparentize($shadow-color, 0.75);

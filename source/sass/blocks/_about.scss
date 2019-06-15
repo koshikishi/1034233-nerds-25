@@ -1,12 +1,12 @@
 // Блок о студии
 .about {
   display: flex;
-  justify-content: space-between;
   padding-bottom: 55px;
   border-bottom: 2px solid $light-gray;
 
   &__column-left {
     width: 660px;
+    margin-right: auto;
     padding-top: 34px;
   }
 
@@ -61,7 +61,6 @@
   &__table {
     width: 360px;
     border-spacing: 0 10px;
-    text-align: left;
     word-wrap: break-word;
     overflow-wrap: break-word;
 
@@ -74,12 +73,17 @@
       flex-direction: column-reverse;
     }
 
+    tr {
+      display: block;
+    }
+
     &-heading,
     &-percent {
       width: 110px;
       max-width: 110px;
       padding: 0;
       padding-right: 10px;
+      text-align: left;
     }
 
     &-heading {
@@ -99,5 +103,9 @@
     display: grid;
     grid-template-columns: 660px 360px;
     gap: 140px;
+
+    &__column-left {
+      margin-right: 0;
+    }
   }
 }
