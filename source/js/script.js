@@ -113,6 +113,92 @@ for (var i = 0; i < sliderDots.length; i++) {
   addDotClickHandler(sliderDots[i], slides[i]);
 }
 
+// Оживление ползунков фильтра цены
+var slider = document.querySelector('.filters-form__slider');
+
+if (slider) {
+  var rangeWidth = 200;
+  var sliderIndent = 20;
+  var thumbHalfWidth = 10;
+  var price = {
+    min: 0,
+    max: 21429
+  };
+
+  // Установка тумблерам флага "перетаскиваемый" при нажатии на них кнопки мыши
+  var thumbs = slider.querySelectorAll('.filters-form__thumb');
+  var isDragging = [false, false];
+
+  thumbs[0].addEventListener('mousedown', function () {
+    isDragging[0] = true;
+  });
+  thumbs[1].addEventListener('mousedown', function () {
+    isDragging[1] = true;
+  });
+  slider.addEventListener('mouseup', function () {
+    isDragging = [false, false];
+  });
+
+  // Установка начального положения тумблеров в зависимости от значений цены
+  var track = slider.querySelector('.filters-form__track');
+  var inputs = document.querySelectorAll('.filters-form__price input');
+
+  var rangeRatio = rangeWidth / (price.max - price.min);
+  var currentPrice = {
+    min: inputs[0].value,
+    max: inputs[1].value
+  };
+
+  moveLeftThumb(currentPrice.min);
+  moveRightThumb(currentPrice.max);
+
+  // Вычисление для перетаскиваемого тумблера нового значения цены и положения на слайдере
+  slider.addEventListener('mousemove', function (evt) {
+    if (isDragging[0]) {
+      currentPrice.min = Math.round(mousePosX(slider, evt) / rangeRatio) + price.min;
+
+      if (currentPrice.min < currentPrice.max && currentPrice.min >= price.min) {
+        moveLeftThumb(currentPrice.min);
+        inputs[0].value = currentPrice.min;
+      }
+    }
+    if (isDragging[1]) {
+      currentPrice.max = Math.round(mousePosX(slider, evt) / rangeRatio) + price.min;
+
+      if (currentPrice.max > currentPrice.min && currentPrice.max <= price.max) {
+        moveRightThumb(currentPrice.max);
+        inputs[1].value = currentPrice.max;
+      }
+    }
+  });
+
+  // Вычисление нового положения тумблеров при изменении значений в полях ввода
+  inputs[0].addEventListener('blur', function () {
+    if (inputs[0].value !== currentPrice.min) {
+      if (inputs[0].value < price.min) {
+        inputs[0].value = price.min;
+      } else if (Number(inputs[0].value) >= currentPrice.max) {
+        inputs[0].value = currentPrice.max - 1;
+      }
+
+      currentPrice.min = inputs[0].value;
+      moveLeftThumb(currentPrice.min);
+    }
+  });
+  inputs[1].addEventListener('blur', function () {
+    if (inputs[1].value !== currentPrice.max) {
+      if (inputs[1].value > price.max) {
+        inputs[1].value = price.max;
+      } else if (inputs[1].value <= Number(currentPrice.min)) {
+        inputs[1].value = Number(currentPrice.min) + 1;
+      }
+
+      currentPrice.max = inputs[1].value;
+      moveRightThumb(currentPrice.max);
+    }
+  });
+}
+
 // Инициализация интерактивной карты
 function initMap() {
   var mapCoordinates = {
@@ -157,4 +243,30 @@ function modalClose() {
       modalShown.classList.remove('modal--error');
     }
   }
+}
+
+// Перемещение тумблеров в зависимости от цены
+function moveLeftThumb(minPrice) {
+  thumbs[0].style.left = (minPrice - price.min) * rangeRatio + sliderIndent + 'px';
+  track.style.left = (minPrice - price.min) * rangeRatio + thumbHalfWidth + 'px';
+}
+
+function moveRightThumb(maxPrice) {
+  thumbs[1].style.right = (price.max - maxPrice) * rangeRatio + sliderIndent + 'px';
+  track.style.right = (price.max - maxPrice) * rangeRatio + thumbHalfWidth + 'px';
+}
+
+// Вычисление координаты X курсора относительно полоски слайдера,
+// учитывая отступы от краёв контейнера и ширину тумблеров
+function mousePosX(elmt, evt) {
+  var x = Math.round(evt.clientX - elmt.getBoundingClientRect().left) - (sliderIndent + thumbHalfWidth);
+
+  if (x < 0) {
+    return 0;
+  }
+  if (x > rangeWidth) {
+    return rangeWidth;
+  }
+
+  return x;
 }
