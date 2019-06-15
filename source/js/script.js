@@ -86,6 +86,33 @@ overlay.addEventListener('click', function () {
   modalClose();
 });
 
+// Оживление слайдера
+var sliderDots = document.querySelectorAll('.slider__indicator');
+var slides = document.querySelectorAll('.slider__item');
+
+var sliderDotActive = document.querySelector('.slider__indicator--active');
+var slideActive = document.querySelector('.slider__item--active');
+
+var addDotClickHandler = function (sliderDot, slide) {
+  sliderDot.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (sliderDot !== sliderDotActive) {
+      sliderDotActive.classList.remove('slider__indicator--active');
+      slideActive.classList.remove('slider__item--active');
+
+      sliderDot.classList.add('slider__indicator--active');
+      slide.classList.add('slider__item--active');
+
+      sliderDotActive = sliderDot;
+      slideActive = slide;
+    }
+  });
+};
+
+for (var i = 0; i < sliderDots.length; i++) {
+  addDotClickHandler(sliderDots[i], slides[i]);
+}
+
 // Появление всплывающего окна
 function modalShow(elmt) {
   elmt.classList.add('modal--shown');
