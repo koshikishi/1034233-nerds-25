@@ -8,6 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleancss = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
+var uglify = require('gulp-uglify');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -37,6 +38,19 @@ gulp.task('img', function () {
     .pipe(gulp.dest('img'));
 });
 
+gulp.task('js', function () {
+  return gulp.src('source/js/script.js')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('js'));
+});
+
 gulp.task('watcher', function () {
   gulp.watch('source/sass/**/*.scss', ['css']);
+  gulp.watch('source/js/*.js', ['js']);
 });
