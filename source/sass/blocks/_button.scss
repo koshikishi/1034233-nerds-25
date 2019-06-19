@@ -5,8 +5,9 @@
   min-width: 240px;
   max-width: 380px;
   padding: 16px;
-  font: inherit;
-  font-weight: 500;
+  font: inherit {
+    weight: 500;
+  }
   line-height: 18px;
   vertical-align: middle;
   text-align: center;
@@ -15,8 +16,9 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   background-color: $red;
-  border: none;
-  border-radius: 3px;
+  border: none {
+    radius: 3px;
+  }
   cursor: pointer;
 
   &:hover,

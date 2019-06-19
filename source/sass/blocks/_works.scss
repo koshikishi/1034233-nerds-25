@@ -1,6 +1,6 @@
 // Блок портфолио
 .works {
-  border-bottom: 2px solid $light-gray;
+  @extend .services;
 
   &__list {
     display: flex;

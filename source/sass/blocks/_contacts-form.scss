@@ -27,8 +27,9 @@
       font: inherit;
       color: $dark-gray;
       background-color: transparent;
-      border: 2px solid #d7dcde;
-      border-radius: 3px;
+      border: 2px solid #d7dcde {
+        radius: 3px;
+      }
 
       &::placeholder {
         color: currentColor;

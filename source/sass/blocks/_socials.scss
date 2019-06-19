@@ -72,21 +72,11 @@
       transform: translate(-50%, -50%);
     }
 
-    &--vk {
-      &::before {
-        background-image: url("../img/social-icon-vk.svg");
-      }
-    }
-
-    &--fb {
-      &::before {
-        background-image: url("../img/social-icon-fb.svg");
-      }
-    }
-
-    &--ig {
-      &::before {
-        background-image: url("../img/social-icon-ig.svg");
+    @each $social in vk, fb, ig {
+      &--#{$social} {
+        &::before {
+          background-image: url("../img/social-icon-#{$social}.svg");
+        }
       }
     }
   }

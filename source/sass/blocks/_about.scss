@@ -2,7 +2,7 @@
 .about {
   display: flex;
   padding-bottom: 55px;
-  border-bottom: 2px solid $light-gray;
+  @extend .services;
 
   &__column-left {
     width: 660px;
@@ -16,8 +16,9 @@
   }
 
   p {
-    margin: 0;
-    margin-bottom: 39px;
+    margin: 0 {
+      bottom: 39px;
+    }
   }
 
   &__title {
@@ -26,8 +27,9 @@
 
   &__list {
     margin: 0;
-    padding: 0;
-    padding-left: 36px;
+    padding: 0 {
+      left: 36px;
+    }
     list-style: none;
 
     li {
@@ -81,8 +83,9 @@
     &-percent {
       width: 110px;
       max-width: 110px;
-      padding: 0;
-      padding-right: 10px;
+      padding: 0 {
+        right: 10px;
+      }
       text-align: left;
     }
 

@@ -58,8 +58,9 @@
     width: 0;
     height: 0;
     color: transparentize($gray, 0.8);
-    border: 0 solid currentColor;
-    border-width: 10px 5.5px;
+    border: 0 solid currentColor {
+      width: 10px 5.5px;
+    }
 
     &:hover,
     &:focus {
@@ -72,19 +73,17 @@
       color: #231f20;
     }
 
-    &--up {
-      border: {
-        top: none;
-        right-color: transparent;
-        left-color: transparent;
-      }
-    }
-
-    &--down {
-      border: {
-        right-color: transparent;
-        bottom: none;
-        left-color: transparent;
+    @each $order in up, down {
+      &--#{$order} {
+        border: {
+          @if $order == up {
+            top: none;
+          } @else {
+            bottom: none;
+          }
+          right-color: transparent;
+          left-color: transparent;
+        }
       }
     }
   }
